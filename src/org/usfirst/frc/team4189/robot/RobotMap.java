@@ -41,8 +41,8 @@ public class RobotMap {
 	public static int encB2Port = 3;
 	public static int encA3Port = 4;
 	public static int encB3Port = 5;
-	public static int limitSWL1 = 6;
-	public static int limitSWL2 = 7;
+	public static int winchLimitSW = 6;
+	public static int limitSW2 = 7;
 	//public static int *NAME* = 8;
 	//public static int *NAME* = 9;
 	
