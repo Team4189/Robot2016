@@ -25,12 +25,12 @@ public class RobotMap {
 	//PWM port numbers go here 
 	public static int leftMotorPort = 0;
 	public static int rightMotorPort = 1;
-	public static int fanPort = 2;
-	public static int winchPort = 3;
-	public static int scissorPort = 4;
-	public static int chevalPort = 5;
-	public static int shooterAnglePort = 6;
-	public static int shooterPort = 7;
+	public static int winchPort = 2;
+	public static int scissorPort = 3;
+	public static int chevalPort = 4;
+	public static int shooterAnglePort = 5;
+	public static int shooterPort = 6;
+	//public static int fanPort = 7;
 	//public static int *NAME* = 8;
 	//public static int *NAME* = 9;
 	
@@ -41,8 +41,8 @@ public class RobotMap {
 	public static int encB2Port = 3;
 	public static int encA3Port = 4;
 	public static int encB3Port = 5;
-	//public static int *NAME* = 6;
-	//public static int *NAME* = 7;
+	public static int limitSWL1 = 6;
+	public static int limitSWL2 = 7;
 	//public static int *NAME* = 8;
 	//public static int *NAME* = 9;
 	
