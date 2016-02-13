@@ -33,17 +33,9 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	public static Chassis chassis = new Chassis();
-<<<<<<< Updated upstream
 	public static Lifter lifter = new Lifter();
 	public static Shooter shooter = new Shooter();
 	public static Cheval cheval = new Cheval();
-=======
-
-	public static Lifter lifter = new Lifter();
-
-	public static Shooter shooter = new Shooter();
-
->>>>>>> Stashed changes
 	DriveWithJoysticks driveWithJoysticks;
     CameraServer server;
 	
