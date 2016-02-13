@@ -16,6 +16,7 @@ import org.usfirst.frc.team4189.robot.commands.DriveForSquare;
 import org.usfirst.frc.team4189.robot.commands.DriveWithJoysticks;
 import org.usfirst.frc.team4189.robot.commands.ExampleCommand;
 import org.usfirst.frc.team4189.robot.subsystems.Chassis;
+import org.usfirst.frc.team4189.robot.subsystems.Cheval;
 import org.usfirst.frc.team4189.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team4189.robot.subsystems.Lifter;
 import org.usfirst.frc.team4189.robot.subsystems.Shooter;
@@ -34,6 +35,7 @@ public class Robot extends IterativeRobot {
 	public static Chassis chassis = new Chassis();
 	public static Lifter lifter = new Lifter();
 	public static Shooter shooter = new Shooter();
+	public static Cheval cheval = new Cheval();
 	DriveWithJoysticks driveWithJoysticks;
     CameraServer server;
 	
