@@ -14,8 +14,7 @@ public class Lifter extends Subsystem {
 	
 	Talon winchMotor = new Talon(RobotMap.winchPort);
 	Talon scissorMotor = new Talon(RobotMap.scissorPort);
-	DigitalInput limitSWL1 = new DigitalInput(RobotMap.limitSWL1);
-	DigitalInput limitSWL2 = new DigitalInput(RobotMap.limitSWL2);
+
 	DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);
     DigitalInput chanB = new DigitalInput(RobotMap.encB3Port);
     Encoder winchEnc = new Encoder(chanA, chanB);
