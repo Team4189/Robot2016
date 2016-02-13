@@ -3,6 +3,7 @@ package org.usfirst.frc.team4189.robot.subsystems;
 import org.usfirst.frc.team4189.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.DigitalInput;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -15,12 +16,18 @@ public class Lifter extends Subsystem {
 	Talon scissorMotor = new Talon(RobotMap.scissorPort);
 	DigitalInput limitSWL1 = new DigitalInput(RobotMap.limitSWL1);
 	DigitalInput limitSWL2 = new DigitalInput(RobotMap.limitSWL2);
+	DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);
+    DigitalInput chanB = new DigitalInput(RobotMap.encB3Port);
+    Encoder winchEnc = new Encoder(chanA, chanB);
 	
 	public void setWinch(double x){
 		winchMotor.set(x);
 	}
     public void setScissor(double x){
     	scissorMotor.set(x);
+    }
+    public double encGet() {
+    	return winchEnc.getDistance();
     }
     
     // Put methods for controlling this subsystem

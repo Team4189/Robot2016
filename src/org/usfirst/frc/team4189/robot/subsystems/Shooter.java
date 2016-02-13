@@ -19,9 +19,7 @@ public class Shooter extends Subsystem {
     Talon shooterAngleMotor = new Talon(RobotMap.shooterAnglePort);
     Talon shooterOperation = new Talon(RobotMap.shooterPort);
     Talon introBallMotor = new Talon(RobotMap.introBallPort);
-    DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);
-    DigitalInput chanB = new DigitalInput(RobotMap.encB3Port);
-    Encoder shooterEnc = new Encoder(chanA, chanB);
+    
     
     public void changeAngle(double x) {
 	shooterAngleMotor.set(x);
@@ -35,9 +33,7 @@ public class Shooter extends Subsystem {
 	introBallMotor.set(x);
     }
     
-    public double encGet() {
-	return shooterEnc.getDistance();
-    }
+    
     
     public void initDefaultCommand() {
 	// Set the default command for a subsystem here.

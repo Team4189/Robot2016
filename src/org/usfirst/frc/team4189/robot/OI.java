@@ -11,6 +11,7 @@ import org.usfirst.frc.team4189.robot.commands.ExampleCommand;
 import org.usfirst.frc.team4189.robot.commands.LifterUp;
 import org.usfirst.frc.team4189.robot.commands.ResetGyro;
 import org.usfirst.frc.team4189.robot.commands.SquareUp;
+import org.usfirst.frc.team4189.robot.commands.WinchUp;
 
 
 /**
@@ -26,7 +27,10 @@ public class OI {
 	public static AnalogGyro gyro = new AnalogGyro(3);
 	public static Button resetGyro = new JoystickButton(OI.rightStick , 2);
 	public static Button squareUp = new JoystickButton(OI.rightStick , 3);
-	public static Button winchUp = new JoystickButton(OI.leftStick , 3);
+	public static Button lifterUp = new JoystickButton(OI.leftStick , 3);
+	public static Button winchUp = new JoystickButton(OI.leftStick , 5);
+
+	
 	
 	
 	
@@ -60,7 +64,8 @@ public class OI {
 	 public OI(){
 			resetGyro.whenPressed(new ResetGyro());
 			squareUp.whenPressed(new SquareUp());
-			winchUp.whileHeld(new LifterUp());
+			lifterUp.whileHeld(new LifterUp());
+			winchUp.whenPressed(new WinchUp());
 
 			 //CameraServer.getInstance().startAutomaticCapture(Robot.chassis.pixyCam);
 	 }
