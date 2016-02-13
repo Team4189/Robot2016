@@ -24,7 +24,6 @@ public class Shooter extends Subsystem {
     
     public void changeAngle(double x) {
 	shooterAngleMotor.set(x);
-	
 	// Angle up.
 	
 	// Angle down.
