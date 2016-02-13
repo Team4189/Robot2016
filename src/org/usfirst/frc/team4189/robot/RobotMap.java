@@ -30,7 +30,7 @@ public class RobotMap {
 	public static int chevalPort = 4;
 	public static int shooterAnglePort = 5;
 	public static int shooterPort = 6;
-	//public static int fanPort = 7;
+	public static int introBallPort = 7;
 	//public static int *NAME* = 8;
 	//public static int *NAME* = 9;
 	

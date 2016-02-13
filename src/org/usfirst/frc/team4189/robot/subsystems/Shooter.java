@@ -18,23 +18,21 @@ public class Shooter extends Subsystem {
     
     Talon shooterAngleMotor = new Talon(RobotMap.shooterAnglePort);
     Talon shooterOperation = new Talon(RobotMap.shooterPort);
+    Talon introBallMotor = new Talon(RobotMap.introBallPort);
     DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);
     DigitalInput chanB = new DigitalInput(RobotMap.encB3Port);
     Encoder shooterEnc = new Encoder(chanA, chanB);
     
     public void changeAngle(double x) {
 	shooterAngleMotor.set(x);
-	
-	// Angle up.
-	
-	// Angle down.
     }
     
     public void fireShooter(double x) {
 	shooterOperation.set(x);
-	// Load shooter.
-	
-	// Fire shooter.
+    }
+    
+    public void introBall(double x) {
+	introBallMotor.set(x);
     }
     
     public double encGet() {
