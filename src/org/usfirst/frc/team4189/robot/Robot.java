@@ -17,6 +17,7 @@ import org.usfirst.frc.team4189.robot.commands.DriveWithJoysticks;
 import org.usfirst.frc.team4189.robot.commands.ExampleCommand;
 import org.usfirst.frc.team4189.robot.subsystems.Chassis;
 import org.usfirst.frc.team4189.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team4189.robot.subsystems.Shooter;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -30,6 +31,7 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	public static Chassis chassis = new Chassis();
+	public static Shooter shooter = new Shooter();
 	DriveWithJoysticks driveWithJoysticks;
     CameraServer server;
 	
