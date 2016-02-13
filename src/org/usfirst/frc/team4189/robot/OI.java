@@ -21,7 +21,9 @@ public class OI {
 	public static Joystick leftStick = new Joystick(RobotMap.leftStick);
 	public static Joystick rightStick = new Joystick(RobotMap.rightStick);
 	public static AnalogInput rangeFinder1 = new AnalogInput(0);
-	public static AnalogGyro gyro = new AnalogGyro(1);
+	public static AnalogInput rangeFinder2 = new AnalogInput(1);
+	public static AnalogInput rangeFinder3 = new AnalogInput(2);
+	public static AnalogGyro gyro = new AnalogGyro(3);
 	public static Button resetGyro = new JoystickButton(OI.rightStick , 2);
 	public static Button squareUp = new JoystickButton(OI.rightStick , 3);
 	

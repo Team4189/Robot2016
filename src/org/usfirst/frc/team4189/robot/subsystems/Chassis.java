@@ -23,7 +23,6 @@ public class Chassis extends Subsystem {
     Talon leftMotor = new Talon(RobotMap.leftMotorPort);
 
 
-
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 

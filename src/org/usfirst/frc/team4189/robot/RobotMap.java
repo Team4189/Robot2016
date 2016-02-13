@@ -51,7 +51,7 @@ public class RobotMap {
 	public static int rngF1Port = 0;
 	public static int rngF2Port = 1;
 	public static int rngF3Port = 2;
-	//public static int *NAME* = 3;
+	public static int gyroPort = 3;
 	
 	//Relay port numbers go here
 	//public static int *NAME* = 0;
