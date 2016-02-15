@@ -3,6 +3,7 @@ package org.usfirst.frc.team4189.robot.commands;
 import org.usfirst.frc.team4189.robot.OI;
 import org.usfirst.frc.team4189.robot.Robot;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -11,6 +12,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class DriveWithJoysticks extends Command {
 	int state;
+	Timer timer = new Timer();
+	boolean whichCommand;
 
     public DriveWithJoysticks() {
         // Use requires() here to declare subsystem dependencies
@@ -21,6 +24,7 @@ public class DriveWithJoysticks extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	state = 2;
+    	whichCommand = true;
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -58,7 +62,31 @@ public class DriveWithJoysticks extends Command {
     		new ShooterDown();
     	}
     }
- 
+    
+    void setLifter(){
+    	if(OI.lifterUp.get() == true && whichCommand == true){
+			timer.start();
+				if(timer.get() < 5){
+					new LifterUp();
+					whichCommand = false;
+					timer.stop();
+					timer.reset();
+				}
+		}
+		if(OI.chevalDown.get() == true && whichCommand == false){
+			timer.start();
+				if(timer.get() < 2){
+					new LifterDown();
+					whichCommand = true;
+					timer.stop();
+					timer.reset();
+				}
+			
+		}
+		
+
+    }
+    
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
     	//Robot.chassis.setSpeed(0, 0);

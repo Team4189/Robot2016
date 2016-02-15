@@ -56,27 +56,7 @@ public class OI {
 			shooterUp.whenPressed(new ShooterUp());
 			shooterDown.whenPressed(new ShooterDown());
 			
-			if(lifterUp.get() == true && whichCommand == true){
-				timer.start();
-					if(timer.get() < 5){
-						new LifterUp();
-						whichCommand = false;
-						timer.stop();
-						timer.reset();
-					}
-			}
-			if(chevalDown.get() == true && whichCommand == false){
-				timer.start();
-					if(timer.get() < 2){
-						new LifterDown();
-						whichCommand = true;
-						timer.stop();
-						timer.reset();
-					}
-				
-			}
-			
-			//CameraServer.getInstance().startAutomaticCapture(Robot.chassis.pixyCam);
+						//CameraServer.getInstance().startAutomaticCapture(Robot.chassis.pixyCam);
 	 }
 }
 
