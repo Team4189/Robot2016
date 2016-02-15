@@ -49,6 +49,7 @@ public class DriveWithJoysticks extends Command {
     	
     }
     void goToState(int whatState){
+    	
     	if (whatState == 1 && Robot.shooter.encGet() < 100){
     		new ShooterUp();
     	}
@@ -61,6 +62,7 @@ public class DriveWithJoysticks extends Command {
     	if (whatState == 3 && Robot.shooter.encGet() > -100){
     		new ShooterDown();
     	}
+    SmartDashboard.putNumber("shooter angle encoder value", Robot.shooter.encGet());
     }
     
     void setLifter(){
