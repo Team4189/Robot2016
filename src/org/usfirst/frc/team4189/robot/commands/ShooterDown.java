@@ -7,10 +7,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class ShooterUp extends Command {
-	
+public class ShooterDown extends Command {
 
-    public ShooterUp() {
+    public ShooterDown() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -21,11 +20,11 @@ public class ShooterUp extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	if(Robot.shooter.shooterLimitSW1.get()){
-    		Robot.shooter.changeAngle(0);
+    	if(Robot.shooter.shooterLimitSW2.get()){
+    		Robot.shooter.changeAngle(-1);
     	}
     	else{
-    		Robot.shooter.changeAngle(1);
+    		Robot.shooter.changeAngle(0);
     	}
     }
 

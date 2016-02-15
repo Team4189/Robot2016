@@ -19,7 +19,8 @@ public class Shooter extends Subsystem {
     Talon shooterAngleMotor = new Talon(RobotMap.shooterAnglePort);
     Talon shooterOperation = new Talon(RobotMap.shooterPort);
     Talon introBallMotor = new Talon(RobotMap.introBallPort);
-    
+	public DigitalInput shooterLimitSW1 = new DigitalInput(RobotMap.shooterLimitSW1);    
+	public DigitalInput shooterLimitSW2 = new DigitalInput(RobotMap.shooterLimitSW2);    
     
     public void changeAngle(double x) {
 	shooterAngleMotor.set(x);
@@ -32,8 +33,6 @@ public class Shooter extends Subsystem {
     public void introBall(double x) {
 	introBallMotor.set(x);
     }
-    
-    
     
     public void initDefaultCommand() {
 	// Set the default command for a subsystem here.
