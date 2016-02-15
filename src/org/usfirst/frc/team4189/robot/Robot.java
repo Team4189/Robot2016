@@ -55,7 +55,6 @@ public class Robot extends IterativeRobot {
         driveWithJoysticks = new DriveWithJoysticks();
         chassis.dashData();
         AxisCamera camera = new AxisCamera(null);
-    	
     }
 	
 	public void disabledPeriodic() {

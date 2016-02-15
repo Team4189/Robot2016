@@ -20,12 +20,7 @@ public class WinchUp extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	if(Robot.lifter.encGet() < 100){
-    		Robot.lifter.setWinch(1);
-    	}
-    	else{
-    		Robot.lifter.setWinch(0);
-    	}
+    	Robot.lifter.setWinch(1);
     }
 
     // Make this return true when this Command no longer needs to run execute()

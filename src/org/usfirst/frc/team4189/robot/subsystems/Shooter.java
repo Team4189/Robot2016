@@ -20,7 +20,15 @@ public class Shooter extends Subsystem {
     Talon shooterOperation = new Talon(RobotMap.shooterPort);
     Talon introBallMotor = new Talon(RobotMap.introBallPort);
 	public DigitalInput shooterLimitSW1 = new DigitalInput(RobotMap.shooterLimitSW1);    
-	public DigitalInput shooterLimitSW2 = new DigitalInput(RobotMap.shooterLimitSW2);    
+	public DigitalInput shooterLimitSW2 = new DigitalInput(RobotMap.shooterLimitSW2);
+	DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);
+    DigitalInput chanB = new DigitalInput(RobotMap.encB3Port);
+    Encoder winchEnc = new Encoder(chanA, chanB);
+    
+    public double encGet() {
+	return winchEnc.getDistance();
+	}
+
     
     public void changeAngle(double x) {
 	shooterAngleMotor.set(x);

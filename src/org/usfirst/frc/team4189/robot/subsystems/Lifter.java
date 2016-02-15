@@ -15,9 +15,9 @@ public class Lifter extends Subsystem {
 	Talon winchMotor = new Talon(RobotMap.winchPort);
 	Talon scissorMotor = new Talon(RobotMap.scissorPort);
 
-	DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);
-    DigitalInput chanB = new DigitalInput(RobotMap.encB3Port);
-    Encoder winchEnc = new Encoder(chanA, chanB);
+	//DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);
+    //DigitalInput chanB = new DigitalInput(RobotMap.encB3Port);
+    //Encoder winchEnc = new Encoder(chanA, chanB);
 	
 	public void setWinch(double x){
 		winchMotor.set(x);
@@ -25,9 +25,11 @@ public class Lifter extends Subsystem {
     public void setScissor(double x){
     	scissorMotor.set(x);
     }
-    public double encGet() {
+    
+    /*public double encGet() {
     	return winchEnc.getDistance();
     }
+    */
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
