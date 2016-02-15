@@ -38,7 +38,7 @@ public class OI {
 	public static Button shooterUp = new JoystickButton(OI.rightStick , 6);
 	public static Button shooterDown = new JoystickButton(OI.rightStick , 4);
 	public static Button chevalDown = new JoystickButton(OI.rightStick , 5);
-	public static Button lifterUp = new JoystickButton(OI.leftStick , 3);
+	public static Button lifterUp = new JoystickButton(OI.leftStick , 4);
 	//public static Button lifterDown = new JoystickButton(OI.leftStick , 2);
 	public static Button winchUp = new JoystickButton(OI.leftStick , 5);
 	
@@ -61,6 +61,8 @@ public class OI {
 					if(timer.get() < 5){
 						new LifterUp();
 						whichCommand = false;
+						timer.stop();
+						timer.reset();
 					}
 			}
 			if(chevalDown.get() == true && whichCommand == false){
@@ -68,6 +70,8 @@ public class OI {
 					if(timer.get() < 2){
 						new LifterDown();
 						whichCommand = true;
+						timer.stop();
+						timer.reset();
 					}
 				
 			}

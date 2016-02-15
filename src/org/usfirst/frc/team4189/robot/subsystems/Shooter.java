@@ -23,10 +23,10 @@ public class Shooter extends Subsystem {
 	public DigitalInput shooterLimitSW2 = new DigitalInput(RobotMap.shooterLimitSW2);
 	DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);
     DigitalInput chanB = new DigitalInput(RobotMap.encB3Port);
-    Encoder winchEnc = new Encoder(chanA, chanB);
+    Encoder enc3 = new Encoder(chanA, chanB);
     
     public double encGet() {
-	return winchEnc.getDistance();
+	return enc3.getDistance();
 	}
 
     
