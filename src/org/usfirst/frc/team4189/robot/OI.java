@@ -27,7 +27,6 @@ import org.usfirst.frc.team4189.robot.commands.WinchUp;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-	
 	//Joysticks
 	public static Joystick leftStick = new Joystick(RobotMap.leftStick);
 	public static Joystick rightStick = new Joystick(RobotMap.rightStick);
@@ -57,18 +56,18 @@ public class OI {
     // button.whileHeld(new ExampleCommand());
     // button.whenReleased(new ExampleCommand());
 	 
-	public OI(){
-			resetGyro.whenPressed(new ResetGyro());
-			squareUp.whenPressed(new SquareUp());
-			lifterUp.whileHeld(new LifterUp());
-			winchUp.whenPressed(new WinchUp());
-			shooterUp.whenPressed(new ShooterUp());
-			shooterDown.whenPressed(new ShooterDown());
-			shooterShoot.whileHeld(new ShooterShoot());
-			introBall.whenPressed(new IntroBall());
-			shooterScoop.whileHeld(new ShooterScoop());
+	//public OI(){
+			//resetGyro.whenPressed(new ResetGyro());
+			//squareUp.whenPressed(new SquareUp());
+			//lifterUp.whileHeld(new LifterUp());
+			//winchUp.whenPressed(new WinchUp());
+			//shooterUp.whenPressed(new ShooterUp());
+			//shooterDown.whenPressed(new ShooterDown());
+			//shooterShoot.whileHeld(new ShooterShoot());
+			//introBall.whenPressed(new IntroBall());
+			//shooterScoop.whileHeld(new ShooterScoop());
 						//CameraServer.getInstance().startAutomaticCapture(Robot.chassis.pixyCam);
-	 }
+	// }
 }
 
 

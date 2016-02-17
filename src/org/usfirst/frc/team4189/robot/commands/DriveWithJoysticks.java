@@ -32,14 +32,14 @@ public class DriveWithJoysticks extends Command {
     	Robot.chassis.setSpeed(OI.leftStick.getY() , OI.rightStick.getY());
     	
     }
-    public int whatState(){
-    	if (OI.shooterUp.get() == true){
+    /*public int whatState(){
+    	if (OI.shooterUp.get() == true && whatState() != 3){
     		state = state + 1;
     		SmartDashboard.putNumber("Shooter State", state);
     		return state;
     		
     	}
-    	if (OI.shooterDown.get() == true){
+    	if (OI.shooterDown.get() == true && whatState() != 1){
     		state = state - 1;
     		SmartDashboard.putNumber("Shooter State", state);
     		return state;
@@ -53,14 +53,17 @@ public class DriveWithJoysticks extends Command {
     	if (whatState == 1 && Robot.shooter.encGet() < 100){
     		new ShooterUp();
     	}
-    	if (whatState == 2 && Robot.shooter.encGet() < 0){
+    	else if (whatState == 2 && Robot.shooter.encGet() < 0){
     		new ShooterUp();
     	}
-    	if (whatState == 2 && Robot.shooter.encGet() > 0){
+    	else if (whatState == 2 && Robot.shooter.encGet() > 0){
     		new ShooterDown();
     	}
-    	if (whatState == 3 && Robot.shooter.encGet() > -100){
+    	else if (whatState == 3 && Robot.shooter.encGet() > -100){
     		new ShooterDown();
+    	}
+    	else{
+    		SmartDashboard.putNumber("Motor State not found", whatState);
     	}
     SmartDashboard.putNumber("shooter angle encoder value", Robot.shooter.encGet());
     }
@@ -87,7 +90,7 @@ public class DriveWithJoysticks extends Command {
 		}
 		
 
-    }
+    }*/
     
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {

@@ -49,12 +49,15 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-		oi = new OI();
+		System.out.println("The Robot has begun to initialize");
+    	oi = new OI();
+    	System.out.println("The Robot has initialized OI.java");
         // instantiate the command used for the autonomous period
         autonomousCommand = new DriveForSquare();
         driveWithJoysticks = new DriveWithJoysticks();
         chassis.dashData();
-        AxisCamera camera = new AxisCamera(null);
+        //AxisCamera camera = new AxisCamera(null);
+        System.out.println("The robot has initialized");
     }
 	
 	public void disabledPeriodic() {
