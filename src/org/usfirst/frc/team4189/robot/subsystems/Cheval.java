@@ -19,7 +19,7 @@ public class Cheval extends Subsystem {
     }
     
     public void initDefaultCommand() {
-	setDefaultCommand(new DriveWithJoysticks());
+	//setDefaultCommand(new DriveWithJoysticks());
 	// Set the default command for a subsystem here.
 	//setDefaultCommand(new MySpecialCommand());
     }

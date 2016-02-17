@@ -36,6 +36,7 @@ public class DriveWithJoysticks extends Command {
     	if (OI.shooterUp.get() == true){
     		state = state + 1;
     		SmartDashboard.putNumber("Shooter State", state);
+    		System.out.println(state);
     		return state;
     		
     	}

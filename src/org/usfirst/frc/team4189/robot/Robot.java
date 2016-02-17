@@ -37,7 +37,7 @@ public class Robot extends IterativeRobot {
 	public static Shooter shooter = new Shooter();
 	public static Cheval cheval = new Cheval();
 	DriveWithJoysticks driveWithJoysticks;
-    CameraServer server;
+   
 	
 		
 	
@@ -49,12 +49,13 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-		oi = new OI();
+		System.out.println("The Robot has begun initializing");
+    	oi = new OI();
         // instantiate the command used for the autonomous period
         autonomousCommand = new DriveForSquare();
         driveWithJoysticks = new DriveWithJoysticks();
         chassis.dashData();
-        AxisCamera camera = new AxisCamera(null);
+        System.out.println("The Robot has initialized");
     }
 	
 	public void disabledPeriodic() {

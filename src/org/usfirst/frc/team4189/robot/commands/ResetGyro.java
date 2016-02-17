@@ -25,8 +25,8 @@ public class ResetGyro extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	OI.gyro.reset();
-    	SmartDashboard.putNumber("Gyro Angle", OI.gyro.getAngle());
+    	//OI.gyro.reset();
+    	//SmartDashboard.putNumber("Gyro Angle", OI.gyro.getAngle());
     	resetPlease = true;
     }
 

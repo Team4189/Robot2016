@@ -34,23 +34,24 @@ public class Chassis extends Subsystem {
     public double convert(){
 	//conversion factor: 4.9mV/1cm
 	//this is our best guess so far
-	return OI.rangeFinder1.getVoltage()*83.961;
+	//return OI.rangeFinder1.getVoltage()*83.961;
+    	return 1;
     }
 
     public double gyroConvert(){
-	if(OI.gyro.getAngle() < 360 && OI.gyro.getAngle() > -360){
-	    return OI.gyro.getAngle();
-
-	}
-	OI.gyro.reset();
+	//if(OI.gyro.getAngle() < 360 && OI.gyro.getAngle() > -360){
+	    //return OI.gyro.getAngle();
+    	return 1;
+	//}
+	//OI.gyro.reset();
 	//return 0.0;
-	return OI.gyro.getAngle();
+	//return OI.gyro.getAngle();
 
 
     }
     public void dashData(){
 	SmartDashboard.putNumber("Distance In Inches", convert());
-	SmartDashboard.putNumber("Gyro Acceleration" , OI.gyro.getRate());
+	//SmartDashboard.putNumber("Gyro Acceleration" , OI.gyro.getRate());
 	SmartDashboard.putNumber("Gyro Angle", gyroConvert());
 
     }
