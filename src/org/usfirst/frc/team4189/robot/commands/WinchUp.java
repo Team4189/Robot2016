@@ -1,5 +1,6 @@
 package org.usfirst.frc.team4189.robot.commands;
 
+import org.usfirst.frc.team4189.robot.OI;
 import org.usfirst.frc.team4189.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -20,7 +21,15 @@ public class WinchUp extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.lifter.setWinch(1);
+    	if(OI.winchUp.get() == true){
+    		System.out.println("is running");
+    		Robot.lifter.setWinch(1);
+    	}
+    	else{
+    		System.out.println("is finished");
+    		Robot.lifter.setWinch(0);
+    		this.cancel();
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
