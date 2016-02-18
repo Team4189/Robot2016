@@ -26,9 +26,9 @@ public class RobotMap {
 	public static int leftMotorPort = 0;
 	public static int rightMotorPort = 1;
 	public static int winchPort = 2;
-	public static int scissorPort = 3; //CHANGE TO 3 OR I WILL TAKE YOU OUT BACK AND SHOOT YOU LIKE A HORSE WITH A BROKEN LEG
+	public static int scissorPort = 3;
 	public static int chevalPort = 4;
-	public static int shooterAnglePort = 5; //CHANGE TO 5 OR I WILL TAKE YOU OUT BACK AND SHOOT YOU LIKE A HORSE WITH A BROKEN LEG
+	public static int shooterAnglePort = 5; 
 	public static int shooterPort = 6;
 	public static int introBallPort = 7;
 	//public static int *NAME* = 8;
