@@ -26,7 +26,7 @@ public class RobotMap {
 	public static int leftMotorPort = 0;
 	public static int rightMotorPort = 1;
 	public static int winchPort = 2;
-	public static int scissorPort = 3;
+	public static int scissorPort = 3; //Port 3 is busted
 	public static int chevalPort = 4;
 	public static int shooterAnglePort = 5; 
 	public static int shooterPort = 6;

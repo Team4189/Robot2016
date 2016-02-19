@@ -19,6 +19,7 @@ import org.usfirst.frc.team4189.robot.subsystems.Chassis;
 import org.usfirst.frc.team4189.robot.subsystems.Cheval;
 import org.usfirst.frc.team4189.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team4189.robot.subsystems.Lifter;
+import org.usfirst.frc.team4189.robot.subsystems.Scissor;
 import org.usfirst.frc.team4189.robot.subsystems.Shooter;
 
 /**
@@ -37,6 +38,7 @@ public class Robot extends IterativeRobot {
 	public static Shooter shooter = new Shooter();
 	public static Cheval cheval = new Cheval();
 	DriveWithJoysticks driveWithJoysticks;
+	public static Scissor scissor = new Scissor();
    
 	
 		

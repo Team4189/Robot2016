@@ -33,9 +33,9 @@ public class DriveWithJoysticks extends Command {
     		Robot.lifter.setWinch(0);
     	}
     	
-    	if(OI.winchUp.get() == false){
+    	/*if(OI.lifterUp.get() == false){
     		Robot.lifter.setScissor(0);
-    	}
+    	}*/
     	
     }
     

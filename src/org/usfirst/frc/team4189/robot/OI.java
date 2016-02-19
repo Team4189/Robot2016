@@ -11,8 +11,8 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import org.usfirst.frc.team4189.robot.commands.ChevalDown;
 import org.usfirst.frc.team4189.robot.commands.ExampleCommand;
 import org.usfirst.frc.team4189.robot.commands.IntroBall;
+//import org.usfirst.frc.team4189.robot.commands.LifterUp;
 import org.usfirst.frc.team4189.robot.commands.ResetGyro;
-import org.usfirst.frc.team4189.robot.commands.SetLifter;
 import org.usfirst.frc.team4189.robot.commands.ShooterChangeState;
 import org.usfirst.frc.team4189.robot.commands.ShooterDown;
 import org.usfirst.frc.team4189.robot.commands.ShooterScoop;
@@ -60,7 +60,7 @@ public class OI {
 	public OI(){
 			resetGyro.whenPressed(new ResetGyro());
 			squareUp.whenPressed(new SquareUp());
-			lifterUp.whileHeld(new SetLifter());
+			lifterUp.whileHeld(new WinchUp());
 			winchUp.whileHeld(new WinchUp());
 			shooterUp.whenPressed(new ShooterChangeState());
 			shooterDown.whenPressed(new ShooterChangeState());

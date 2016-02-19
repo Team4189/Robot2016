@@ -21,14 +21,9 @@ public class Lifter extends Subsystem {
 	
 	public void setWinch(double x){
 		winchMotor.set(x);
-		System.out.println();
+		
 	}
-    public void setScissor(double x){
-    	scissorMotor.set(x);
-    	if (scissorMotor.get() =! 0){
-    		System.out.println("is set");
-    	}
-    }
+    
     
     /*public double encGet() {
     	return winchEnc.getDistance();
