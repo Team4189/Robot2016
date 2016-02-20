@@ -26,7 +26,7 @@ public class ShooterChangeState extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        	if (OI.shooterUp.get() == true){
+        	/*if (OI.shooterUp.get() == true){
         		state = state + 1;
         		SmartDashboard.putNumber("Shooter State", state);
         		System.out.println(state);
@@ -58,7 +58,7 @@ public class ShooterChangeState extends Command {
         		new ShooterDown();
         	}
         SmartDashboard.putNumber("shooter angle encoder value", Robot.shooter.encGet());
-        System.out.println(Robot.shooter.encGet());
+        System.out.println(Robot.shooter.encGet());*/
         
     }
 

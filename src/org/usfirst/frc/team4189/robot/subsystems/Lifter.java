@@ -1,7 +1,7 @@
 package org.usfirst.frc.team4189.robot.subsystems;
 
-import org.usfirst.frc.team4189.robot.Robot;
 import org.usfirst.frc.team4189.robot.RobotMap;
+import org.usfirst.frc.team4189.robot.commands.ActionHandler;
 
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
@@ -22,10 +22,11 @@ public class Lifter extends Subsystem {
 	
 	public void setWinch(double x){
 		winchMotor.set(x);
+		
 	}
-    
-	public void setScissor(double x){
+    public void setScissor(double x){
     	scissorMotor.set(x);
+    	
     }
     
     /*public double encGet() {
@@ -39,6 +40,7 @@ public class Lifter extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+    	setDefaultCommand(new ActionHandler());
     }
 }
 

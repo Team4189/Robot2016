@@ -32,7 +32,7 @@ public class DriveWithJoysticks extends Command {
     protected void execute() {
     	Robot.chassis.setSpeed(OI.leftStick.getY() , OI.rightStick.getY());
     	
-    	if(OI.winchUp.get() == false){
+    	/* if(OI.winchUp.get() == false){
     		Robot.lifter.setWinch(0);
     	}
     	
@@ -55,6 +55,7 @@ public class DriveWithJoysticks extends Command {
     	if(OI.portcullisDown.get() == false || OI.portcullis.get() == false){
     		Robot.cheval.setSpeed(0);
     	}
+    	*/
     	
     }
     
