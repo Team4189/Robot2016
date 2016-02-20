@@ -2,6 +2,7 @@ package org.usfirst.frc.team4189.robot.commands;
 
 import org.usfirst.frc.team4189.robot.OI;
 import org.usfirst.frc.team4189.robot.Robot;
+import org.usfirst.frc.team4189.robot.subsystems.Cheval;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
@@ -35,6 +36,9 @@ public class DriveWithJoysticks extends Command {
     	
     	if(OI.winchUp.get() == false){
     		Robot.lifter.setScissor(0);
+    	}
+    	if(OI.chevalDown.get() == false){
+    		Cheval.chevalMotor.set(0);
     	}
     	
     }

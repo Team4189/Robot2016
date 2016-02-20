@@ -67,6 +67,7 @@ public class OI {
 			shooterShoot.whileHeld(new ShooterShoot());
 			introBall.whenPressed(new IntroBall());
 			shooterScoop.whileHeld(new ShooterScoop());
+			chevalDown.whenPressed(new ChevalDown());
 						//CameraServer.getInstance().startAutomaticCapture(Robot.chassis.pixyCam);
 	 }
 }

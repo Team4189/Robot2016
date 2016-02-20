@@ -25,7 +25,7 @@ public class Lifter extends Subsystem {
 	}
     public void setScissor(double x){
     	scissorMotor.set(x);
-    	if (scissorMotor.get() =! 0){
+    	if (scissorMotor.get() != 0){
     		System.out.println("is set");
     	}
     }
