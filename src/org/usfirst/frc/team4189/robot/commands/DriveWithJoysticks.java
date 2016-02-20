@@ -2,6 +2,9 @@ package org.usfirst.frc.team4189.robot.commands;
 
 import org.usfirst.frc.team4189.robot.OI;
 import org.usfirst.frc.team4189.robot.Robot;
+import org.usfirst.frc.team4189.robot.subsystems.Cheval;
+import org.usfirst.frc.team4189.robot.subsystems.Lifter;
+import org.usfirst.frc.team4189.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
@@ -33,8 +36,24 @@ public class DriveWithJoysticks extends Command {
     		Robot.lifter.setWinch(0);
     	}
     	
-    	if(OI.winchUp.get() == false){
+  
+    	if(OI.introBall.get() == false){
+    		Robot.shooter.introBall(0);
+    	}
+    	if(OI.resetGyro.get() == false){
+    		Robot.shooter.introBallReset(0);
+    	}
+    	if(OI.shooterShoot.get() == false){
+    		Robot.shooter.fireShooter(0);
+    	}
+    	//if(OI.shooterUp.get() == false || OI.shooterDown.get() == false){
+    		//Robot.shooter.changeAngle(0);
+    	//}
+    	if(OI.lifterUp.get() == false || OI.lifterDown.get() == false){
     		Robot.lifter.setScissor(0);
+    	}
+    	if(OI.portcullisDown.get() == false || OI.portcullis.get() == false){
+    		Robot.cheval.setSpeed(0);
     	}
     	
     }

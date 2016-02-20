@@ -7,10 +7,12 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-
-import org.usfirst.frc.team4189.robot.commands.ChevalDown;
+import org.usfirst.frc.team4189.robot.commands.ChevalMove;
+import org.usfirst.frc.team4189.robot.commands.ChevalUp;
 import org.usfirst.frc.team4189.robot.commands.ExampleCommand;
 import org.usfirst.frc.team4189.robot.commands.IntroBall;
+import org.usfirst.frc.team4189.robot.commands.LifterDown;
+import org.usfirst.frc.team4189.robot.commands.ResetBopper;
 import org.usfirst.frc.team4189.robot.commands.ResetGyro;
 import org.usfirst.frc.team4189.robot.commands.SetLifter;
 import org.usfirst.frc.team4189.robot.commands.ShooterChangeState;
@@ -22,6 +24,7 @@ import org.usfirst.frc.team4189.robot.commands.SquareUp;
 import org.usfirst.frc.team4189.robot.commands.WinchUp;
 
 
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
@@ -31,6 +34,7 @@ public class OI {
 	//Joysticks
 	public static Joystick leftStick = new Joystick(RobotMap.leftStick);
 	public static Joystick rightStick = new Joystick(RobotMap.rightStick);
+	public static Joystick accessoryStick = new Joystick(RobotMap.rightStick);
 	
 	//Analog Inputs
 	public static AnalogInput rangeFinder1 = new AnalogInput(0);
@@ -39,16 +43,19 @@ public class OI {
 	//public static AnalogGyro gyro = new AnalogGyro(3);
 	
 	//Buttons
-	public static Button resetGyro = new JoystickButton(OI.rightStick , 2);
-	public static Button shooterUp = new JoystickButton(OI.rightStick , 6);
-	public static Button shooterDown = new JoystickButton(OI.rightStick , 4);
-	public static Button chevalDown = new JoystickButton(OI.rightStick , 5);
-	public static Button shooterScoop = new JoystickButton(OI.rightStick , 1);
-	public static Button lifterUp = new JoystickButton(OI.leftStick , 4);
+	public static Button resetGyro = new JoystickButton(OI.leftStick , 2);
+	public static Button shooterUp = new JoystickButton(OI.accessoryStick , 5);
+	public static Button shooterDown = new JoystickButton(OI.accessoryStick , 3);
+	public static Button portcullis = new JoystickButton(OI.accessoryStick , 4);
+	public static Button shooterScoop = new JoystickButton(OI.accessoryStick , 7);
+	public static Button lifterUp = new JoystickButton(OI.accessoryStick , 6);
 	public static Button winchUp = new JoystickButton(OI.leftStick , 5);
-	public static Button shooterShoot = new JoystickButton(OI.leftStick , 1);
-	public static Button squareUp = new JoystickButton(OI.leftStick , 3);
-	public static Button introBall = new JoystickButton(OI.leftStick , 2);
+	public static Button shooterShoot = new JoystickButton(OI.leftStick , 3);
+	//public static Button squareUp = new JoystickButton(OI.leftStick , 3);
+	public static Button introBall = new JoystickButton(OI.accessoryStick , 2);
+	public static Button lifterDown = new JoystickButton(OI.accessoryStick , 8);
+	public static Button portcullisDown = new JoystickButton(OI.accessoryStick , 9);
+	
 	
 
     // Joystick stick = new Joystick(port);
@@ -58,16 +65,19 @@ public class OI {
     // button.whenReleased(new ExampleCommand());
 	 
 	public OI(){
-			resetGyro.whenPressed(new ResetGyro());
-			squareUp.whenPressed(new SquareUp());
+			/*resetGyro.whileHeld(new ResetBopper());
+			//squareUp.whenPressed(new SquareUp());
 			lifterUp.whileHeld(new SetLifter());
 			winchUp.whileHeld(new WinchUp());
-			shooterUp.whenPressed(new ShooterChangeState());
-			shooterDown.whenPressed(new ShooterChangeState());
+			shooterUp.whileHeld(new ShooterUp());
+			shooterDown.whileHeld(new ShooterDown());
 			shooterShoot.whileHeld(new ShooterShoot());
-			introBall.whenPressed(new IntroBall());
+			introBall.whileHeld(new IntroBall());
 			shooterScoop.whileHeld(new ShooterScoop());
-						//CameraServer.getInstance().startAutomaticCapture(Robot.chassis.pixyCam);
+			portcullis.whileHeld(new ChevalMove());
+			lifterDown.whileHeld(new LifterDown());
+			portcullisDown.whileHeld(new ChevalUp());
+						//CameraServer.getInstance().startAutomaticCapture(Robot.chassis.pixyCam);*/
 	 }
 }
 

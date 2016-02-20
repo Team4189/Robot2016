@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  *
  */
 public class Cheval extends Subsystem {
-    Talon chevalMotor = new Talon(RobotMap.chevalPort);
+    public static Talon chevalMotor = new Talon(RobotMap.chevalPort);
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 

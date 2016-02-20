@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4189.robot.commands;
 
 import org.usfirst.frc.team4189.robot.Robot;
+import org.usfirst.frc.team4189.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -20,7 +21,8 @@ public class IntroBall extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.shooter.introBall(1);
+    	Robot.shooter.introBall(.5);
+    	System.out.println(Shooter.introBallMotor.get());
     }
 
     // Make this return true when this Command no longer needs to run execute()

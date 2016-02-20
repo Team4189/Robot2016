@@ -53,6 +53,7 @@ public class Chassis extends Subsystem {
 	SmartDashboard.putNumber("Distance In Inches", convert());
 	//SmartDashboard.putNumber("Gyro Acceleration" , OI.gyro.getRate());
 	SmartDashboard.putNumber("Gyro Angle", gyroConvert());
+	SmartDashboard.putNumber("Talon 3 value", Lifter.scissorMotor.get());
 
     }
     

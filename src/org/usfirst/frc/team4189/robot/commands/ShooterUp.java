@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4189.robot.commands;
 
 import org.usfirst.frc.team4189.robot.Robot;
+import org.usfirst.frc.team4189.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -8,7 +9,6 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class ShooterUp extends Command {
-	
 
     public ShooterUp() {
         // Use requires() here to declare subsystem dependencies
@@ -21,12 +21,8 @@ public class ShooterUp extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	if(Robot.shooter.shooterLimitSW1.get()){
-    		Robot.shooter.changeAngle(0);
-    	}
-    	else{
-    		Robot.shooter.changeAngle(1);
-    	}
+    	Robot.shooter.changeAngle(-1);
+    	System.out.println(Shooter.shooterAngleMotor.get());
     }
 
     // Make this return true when this Command no longer needs to run execute()

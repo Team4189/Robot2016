@@ -20,14 +20,12 @@ public class SetLifter extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	whichCommand = true;
+    	
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	if(OI.lifterUp.get() == true){
-    		System.out.println("is running 2");
-    		Robot.lifter.setScissor(1);
-    		}
+    	Robot.lifter.setScissor(-.75);
 		
     }
 
