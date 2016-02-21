@@ -2,13 +2,15 @@ package org.usfirst.frc.team4189.robot.commands;
 
 import org.usfirst.frc.team4189.robot.Robot;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
 public class IntroBall extends Command {
-
+	Timer timer = new Timer();
+	boolean finished;
     public IntroBall() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
@@ -16,16 +18,36 @@ public class IntroBall extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	timer.start();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.shooter.introBall(1);
+    	
+    	if(timer.get() < .5){
+    		Robot.shooter.introBall(.5);
+    		System.out.println(timer.get());
+    	}
+    	else if(timer.get() > .5 && timer.get() < 1){
+    		Robot.shooter.introBall(-.5);
+    		System.out.println(timer.get());
+    	}
+    	else if(timer.get() >1){
+    		Robot.shooter.introBall(0);
+    		System.out.println(timer.get());
+    		timer.stop();
+    		this.cancel();
+    		
+    		
+    	}
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        
+        	return false;
+        
     }
 
     // Called once after isFinished returns true

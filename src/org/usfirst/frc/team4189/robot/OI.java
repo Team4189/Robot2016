@@ -9,8 +9,10 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 import org.usfirst.frc.team4189.robot.commands.ChevalDown;
+import org.usfirst.frc.team4189.robot.commands.ChevalUp;
 import org.usfirst.frc.team4189.robot.commands.ExampleCommand;
 import org.usfirst.frc.team4189.robot.commands.IntroBall;
+import org.usfirst.frc.team4189.robot.commands.LifterDown;
 import org.usfirst.frc.team4189.robot.commands.ResetGyro;
 import org.usfirst.frc.team4189.robot.commands.SetLifter;
 import org.usfirst.frc.team4189.robot.commands.ShooterChangeState;
@@ -19,6 +21,7 @@ import org.usfirst.frc.team4189.robot.commands.ShooterScoop;
 import org.usfirst.frc.team4189.robot.commands.ShooterShoot;
 import org.usfirst.frc.team4189.robot.commands.ShooterUp;
 import org.usfirst.frc.team4189.robot.commands.SquareUp;
+import org.usfirst.frc.team4189.robot.commands.WinchDown;
 import org.usfirst.frc.team4189.robot.commands.WinchUp;
 
 
@@ -31,6 +34,8 @@ public class OI {
 	//Joysticks
 	public static Joystick leftStick = new Joystick(RobotMap.leftStick);
 	public static Joystick rightStick = new Joystick(RobotMap.rightStick);
+	public static Joystick accStick = new Joystick(RobotMap.accStick);
+
 	
 	//Analog Inputs
 	public static AnalogInput rangeFinder1 = new AnalogInput(0);
@@ -40,15 +45,19 @@ public class OI {
 	
 	//Buttons
 	public static Button resetGyro = new JoystickButton(OI.rightStick , 2);
-	public static Button shooterUp = new JoystickButton(OI.rightStick , 6);
-	public static Button shooterDown = new JoystickButton(OI.rightStick , 4);
-	public static Button chevalDown = new JoystickButton(OI.rightStick , 5);
+	public static Button shooterUp = new JoystickButton(OI.accStick , 5);
+	public static Button shooterDown = new JoystickButton(OI.accStick , 3);
+	public static Button chevalDown = new JoystickButton(OI.accStick , 4);
+	public static Button chevalUp = new JoystickButton(OI.accStick , 6);
 	public static Button shooterScoop = new JoystickButton(OI.rightStick , 1);
-	public static Button lifterUp = new JoystickButton(OI.leftStick , 4);
-	public static Button winchUp = new JoystickButton(OI.leftStick , 5);
-	public static Button shooterShoot = new JoystickButton(OI.leftStick , 1);
+	public static Button lifterUp = new JoystickButton(OI.accStick , 8);
+	public static Button lifterDown = new JoystickButton(OI.accStick , 7);
+	public static Button winchUp = new JoystickButton(OI.leftStick , 3);
+	public static Button winchDown = new JoystickButton(OI.leftStick , 2);
+	public static Button shooterShoot = new JoystickButton(OI.accStick , 1);
 	public static Button squareUp = new JoystickButton(OI.leftStick , 3);
-	public static Button introBall = new JoystickButton(OI.leftStick , 2);
+		public static Button introBall = new JoystickButton(OI.accStick , 2);
+	//public static Button resetIntroBall = new JoystickButton(OI.leftStick , 6);
 	
 
     // Joystick stick = new Joystick(port);
@@ -61,13 +70,17 @@ public class OI {
 			resetGyro.whenPressed(new ResetGyro());
 			squareUp.whenPressed(new SquareUp());
 			lifterUp.whileHeld(new SetLifter());
+			lifterDown.whileHeld(new LifterDown());
 			winchUp.whileHeld(new WinchUp());
-			shooterUp.whenPressed(new ShooterChangeState());
-			shooterDown.whenPressed(new ShooterChangeState());
+			winchDown.whileHeld(new WinchDown());
+			shooterUp.whileHeld(new ShooterUp());
+			shooterDown.whileHeld(new ShooterDown());
 			shooterShoot.whileHeld(new ShooterShoot());
-			introBall.whenPressed(new IntroBall());
+				introBall.whenPressed(new IntroBall());
 			shooterScoop.whileHeld(new ShooterScoop());
-			chevalDown.whenPressed(new ChevalDown());
+			chevalDown.whileHeld(new ChevalDown());
+			chevalUp.whileHeld(new ChevalUp());
+				
 						//CameraServer.getInstance().startAutomaticCapture(Robot.chassis.pixyCam);
 	 }
 }

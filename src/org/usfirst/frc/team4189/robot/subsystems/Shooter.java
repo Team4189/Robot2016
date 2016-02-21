@@ -16,9 +16,9 @@ public class Shooter extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     
-    Talon shooterAngleMotor = new Talon(RobotMap.shooterAnglePort);
-    Talon shooterOperation = new Talon(RobotMap.shooterPort);
-    Talon introBallMotor = new Talon(RobotMap.introBallPort);
+    public static Talon shooterAngleMotor = new Talon(RobotMap.shooterAnglePort);
+    public static Talon shooterOperation = new Talon(RobotMap.shooterPort);
+    public static Talon introBallMotor = new Talon(RobotMap.introBallPort);
 	public DigitalInput shooterLimitSW1 = new DigitalInput(RobotMap.shooterLimitSW1);    
 	public DigitalInput shooterLimitSW2 = new DigitalInput(RobotMap.shooterLimitSW2);
 	DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);

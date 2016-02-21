@@ -3,6 +3,8 @@ package org.usfirst.frc.team4189.robot.commands;
 import org.usfirst.frc.team4189.robot.OI;
 import org.usfirst.frc.team4189.robot.Robot;
 import org.usfirst.frc.team4189.robot.subsystems.Cheval;
+import org.usfirst.frc.team4189.robot.subsystems.Lifter;
+import org.usfirst.frc.team4189.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
@@ -30,15 +32,20 @@ public class DriveWithJoysticks extends Command {
     protected void execute() {
     	Robot.chassis.setSpeed(OI.leftStick.getY() , OI.rightStick.getY());
     	
-    	if(OI.winchUp.get() == false){
+    	if(OI.winchUp.get() == false || OI.winchDown.get() == false){
     		Robot.lifter.setWinch(0);
     	}
-    	
-    	if(OI.winchUp.get() == false){
-    		Robot.lifter.setScissor(0);
-    	}
-    	if(OI.chevalDown.get() == false){
+    	if(OI.chevalDown.get() == false || OI.chevalUp.get() == false){
     		Cheval.chevalMotor.set(0);
+    	}
+    	if(OI.lifterUp.get() == false || OI.lifterDown.get() == false){
+    		Lifter.scissorMotor.set(0);
+    	}
+    	if(OI.shooterDown.get() == false || OI.shooterUp.get() == false){
+    		Shooter.shooterAngleMotor.set(0);
+    	}
+    	if(OI.shooterShoot.get() == false || OI.shooterShoot.get() == false){
+    		Shooter.shooterOperation.set(0);
     	}
     	
     }
