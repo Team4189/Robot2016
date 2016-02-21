@@ -21,6 +21,7 @@ public class RobotMap {
 	//Joystick port numbers go here
 	public static int leftStick = 0;
 	public static int rightStick = 1;
+	public static int accStick = 2;
 	
 	//PWM port numbers go here 
 	public static int leftMotorPort = 0;

@@ -12,8 +12,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Lifter extends Subsystem {
 	
-	Talon winchMotor = new Talon(RobotMap.winchPort);
-	Talon scissorMotor = new Talon(RobotMap.scissorPort);
+	public static Talon winchMotor = new Talon(RobotMap.winchPort);
+	public static Talon scissorMotor = new Talon(RobotMap.scissorPort);
 
 	//DigitalInput chanA = new DigitalInput(RobotMap.encA3Port);
     //DigitalInput chanB = new DigitalInput(RobotMap.encB3Port);
@@ -25,9 +25,7 @@ public class Lifter extends Subsystem {
 	}
     public void setScissor(double x){
     	scissorMotor.set(x);
-    	if (scissorMotor.get() != 0){
-    		System.out.println("is set");
-    	}
+    	
     }
     
     /*public double encGet() {
