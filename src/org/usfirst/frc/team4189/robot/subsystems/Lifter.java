@@ -21,7 +21,7 @@ public class Lifter extends Subsystem {
 	
 	public void setWinch(double x){
 		winchMotor.set(x);
-		System.out.println();
+		
 	}
     public void setScissor(double x){
     	scissorMotor.set(x);

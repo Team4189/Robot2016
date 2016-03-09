@@ -19,16 +19,16 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  *
  */
 public class Chassis extends Subsystem {
-    Talon rightMotor = new Talon(RobotMap.rightMotorPort);
-    Talon leftMotor = new Talon(RobotMap.leftMotorPort);
+    public static Talon rightMotor = new Talon(RobotMap.rightMotorPort);
+    public static Talon leftMotor = new Talon(RobotMap.leftMotorPort);
 
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
     public void setSpeed(double x, double y){
-	leftMotor.set(x*-1);
-	rightMotor.set(y);
+	leftMotor.set(x);
+	rightMotor.set(y*-1);
     }
 
     public double convert(){

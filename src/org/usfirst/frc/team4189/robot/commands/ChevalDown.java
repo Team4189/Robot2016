@@ -23,7 +23,8 @@ public class ChevalDown extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    		Robot.cheval.setSpeed(-1);
+    		Robot.cheval.setSpeed(.5);
+    		System.out.println("Portcullis Down");
     	
     }
 

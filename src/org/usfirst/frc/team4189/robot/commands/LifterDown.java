@@ -21,6 +21,7 @@ public class LifterDown extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	Robot.lifter.setScissor(-1);
+    	System.out.println("Scissor Down");
     }
 
     // Make this return true when this Command no longer needs to run execute()

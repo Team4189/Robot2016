@@ -54,8 +54,9 @@ public class OI {
 	public static Button lifterDown = new JoystickButton(OI.accStick , 7);
 	public static Button winchUp = new JoystickButton(OI.leftStick , 3);
 	public static Button winchDown = new JoystickButton(OI.leftStick , 2);
+	public static Button winchSafty = new JoystickButton(OI.leftStick , 8);
 	public static Button shooterShoot = new JoystickButton(OI.accStick , 1);
-	public static Button squareUp = new JoystickButton(OI.leftStick , 3);
+	//public static Button squareUp = new JoystickButton(OI.leftStick , 3);
 		public static Button introBall = new JoystickButton(OI.accStick , 2);
 	//public static Button resetIntroBall = new JoystickButton(OI.leftStick , 6);
 	
@@ -68,7 +69,7 @@ public class OI {
 	 
 	public OI(){
 			resetGyro.whenPressed(new ResetGyro());
-			squareUp.whenPressed(new SquareUp());
+			//squareUp.whenPressed(new SquareUp());
 			lifterUp.whileHeld(new SetLifter());
 			lifterDown.whileHeld(new LifterDown());
 			winchUp.whileHeld(new WinchUp());
@@ -76,10 +77,10 @@ public class OI {
 			shooterUp.whileHeld(new ShooterUp());
 			shooterDown.whileHeld(new ShooterDown());
 			shooterShoot.whileHeld(new ShooterShoot());
-				introBall.whenPressed(new IntroBall());
+			introBall.whenPressed(new IntroBall());
 			shooterScoop.whileHeld(new ShooterScoop());
-			chevalDown.whileHeld(new ChevalDown());
-			chevalUp.whileHeld(new ChevalUp());
+			//chevalDown.whileHeld(new ChevalDown());
+			//chevalUp.whileHeld(new ChevalUp());
 				
 						//CameraServer.getInstance().startAutomaticCapture(Robot.chassis.pixyCam);
 	 }

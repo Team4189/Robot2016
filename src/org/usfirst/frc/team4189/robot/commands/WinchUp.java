@@ -21,8 +21,9 @@ public class WinchUp extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    		Robot.lifter.setWinch(1);
     	
+    	Robot.lifter.setWinch(1);
+    	System.out.println("Winch Up");
     	
     	
     }

@@ -50,12 +50,15 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
 		System.out.println("The Robot has begun initializing");
-    	oi = new OI();
+    	System.out.println("Version 1.0");
+		oi = new OI();
         // instantiate the command used for the autonomous period
         autonomousCommand = new DriveForSquare();
         driveWithJoysticks = new DriveWithJoysticks();
-        chassis.dashData();
+        //chassis.dashData();
         System.out.println("The Robot has initialized");
+       
+
     }
 	
 	public void disabledPeriodic() {
@@ -85,6 +88,14 @@ public class Robot extends IterativeRobot {
         if (autonomousCommand != null) autonomousCommand.cancel();
         chassis.dashData();
         //Schedular.getinstance().add(new *command*)
+        System.out.println(Chassis.leftMotor.getChannel());
+        System.out.println(Chassis.rightMotor.getChannel());
+        System.out.println(Lifter.winchMotor.getChannel());
+        System.out.println(Lifter.scissorMotor.getChannel());
+        System.out.println(Cheval.chevalMotor.getChannel());
+        System.out.println(Shooter.shooterAngleMotor.getChannel());
+        System.out.println(Shooter.shooterOperation.getChannel());
+        System.out.println(Shooter.introBallMotor.getChannel());
         
     }
 
